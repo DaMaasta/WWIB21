@@ -1,0 +1,23 @@
+<header>
+    <div> 
+     <form>
+        <input type="search">
+     </form>
+    </div>
+
+ <div>
+    <button><mat-icon>add</mat-icon></button>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
+            <mat-menu #menu="matMenu">
+                    <button1 mat-menu-item><mat-icon>person filed</mat-icon>Meine Kalender</button1>
+                    <button2 mat-menu-item><mat-icon>nightlight</mat-icon>Nachtnodus</button2>
+                    <button3 mat-menu-item><mat-icon>language</mat-icon>Sprache</button3>
+                    <button4 mat-menu-item><mat-icon>event-upcoming</mat-icon>Kalendar einbinden</button4>
+                    <button5 mat-menu-item><mat-icon>share</mat-icon>Kalender teilen</button5>
+                    <button6 mat-menu-item><mat-icon>info</mat-icon>Inforamtion</button6>
+            </mat-menu>
+</div>
+
+    <div><h1>MeXanel</h1></div>
+
+</header>
