@@ -1,23 +1,46 @@
 <header>
-    <div> 
-     <form>
-        <input type="search">
-     </form>
-    </div>
-
- <div>
-    <button><mat-icon>add</mat-icon></button>
-    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
+   <div class="flexbox">
+  
+      <div class="Knopf"> 
+         <button class="menu" mat-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
             <mat-menu #menu="matMenu">
-                    <button1 mat-menu-item><mat-icon>person filed</mat-icon>Meine Kalender</button1>
-                    <button2 mat-menu-item><mat-icon>nightlight</mat-icon>Nachtnodus</button2>
-                    <button3 mat-menu-item><mat-icon>language</mat-icon>Sprache</button3>
-                    <button4 mat-menu-item><mat-icon>event-upcoming</mat-icon>Kalendar einbinden</button4>
-                    <button5 mat-menu-item><mat-icon>share</mat-icon>Kalender teilen</button5>
-                    <button6 mat-menu-item><mat-icon>info</mat-icon>Inforamtion</button6>
+                  <button mat-menu-item><mat-icon>person filed</mat-icon>Meine Kalender</button>
+                  <button mat-menu-item><mat-icon>nightlight</mat-icon>Nachtmodus</button>
+                  <button mat-menu-item><mat-icon>language</mat-icon>Sprache</button>
+                  <button mat-menu-item><mat-icon>event-upcoming</mat-icon>Kalendar einbinden</button>
+                  <button mat-menu-item><mat-icon>share</mat-icon>Kalender teilen</button>
+                  <button mat-menu-item><mat-icon>info</mat-icon>Information</button>
             </mat-menu>
-</div>
+      </div> 
+      <div class="mitte">
+         <div class="search-box">
+            <mat-icon>search</mat-icon>
+         <input class="search-txt" type="text" id="suche" name="" placeholder="suchen..." onkeydown="Event_Key();">
+            <a class="search-btn" href="#" onclick="suchen()">
+               <i class="fas fa-search"></i>
+            </a>
+         </div>
+         <h1 class="name">Kalender
+            
+         </h1>
+      </div>
+         
 
-    <div><h1>MeXanel</h1></div>
+      <div>
+         <button class="add"><mat-icon>add</mat-icon></button>
+      </div>
+      
+   </div>
+
+   <script type="text/javascript"> 
+      function suchen(){
+         var s = document.getElementById("suche").value;
+         windows.location = "https://www.google.de/search?q=" + s ;
+            }
+       function Event_Key(){
+         if(event.KeyCode == 13) {suchen();}            
+         }      
+      </script> 
+
 
 </header>

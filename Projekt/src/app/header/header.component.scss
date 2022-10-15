@@ -1,32 +1,95 @@
 header{
-    box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
-    background-color: white;
-    overflow: hidden;
-    h1 {
-        text-align: center;
-    }
-    button{
-    background-color: transparent;
-    position: absolute;    
-    border: 0px;
-    border-radius: 100%;
-   
 
-    &:hover{
-        background-color: rgba(0,0,0, 0.15);
-    }
+        box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
+        background-color: white;
+        overflow: hidden;
+        padding: 0 5px;
+
+      .flexbox{
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      text-align: center;
     }
 
-    .suche {
-        width: 10em;
-        border: 0px;
-        border-bottom: 2px solid #999;
-        font-size: 1.2em;
-        transition: width 0.5s ease-in-out;
+    .mitte{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+
+      .search-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2px;
+        background: rgb(178, 196, 112);
+        top: 50%;
+        left: 50%;
+       // transform: translate(-50%, -50px);
+        border-radius: 50px;
+        height: 25px;
+        transition: 1s;
       }
-       
-      .suche:focus {
-        font-size: 1.5em;
-        width: 50%;
+      .search-btn{
+      color: rgb(178, 196, 112);
+      float: right;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background: rgb(178, 196, 112);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 2s;
+         }
+      .search-txt{
+        border: none;
+        background: none;
+        outline: none;
+        float:inline-start;
+        padding: 10;
+        color: black;
+        line-height: 20px;
+        width: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        transition:1s;
+
       }
+      .name{
+        display: flex;
+        padding-top: 17px;
+        font-size: 20px;
+       } 
+
+    }
+    .search-box:hover > .search-txt{
+      width: 180px;
+    }
+    .search-box:hover{
+      box-shadow: -5px -5px 10px rgba(36, 36, 36, 0.1);
+    }
+    .search-box:hover > .search-btn{
+      color: rgb(130, 143, 82);
+      background:  rgb(130, 143, 82);
+    }
+
+    .add{
+      background-color: white; 
+      border: 0px; 
+      border-radius: 100px;
+        &:hover{
+          background-color: rgba(0,0,0, 0.05);
+        }   
+    }
+      .menu{
+      background-color: white; 
+      border: 0px; 
+      border-radius: 100px;
+
+        &:hover{
+          background-color: rgba(0,0,0, 0.05);
+        }
+  }
 }
